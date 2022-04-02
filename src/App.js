@@ -1,11 +1,13 @@
-import Header from './Components/SignupAndLogin/Header'
+import SignupHeader from './Components/SignupAndLogin/SignupHeader'
 import Signup from './Components/SignupAndLogin/Signup';
+import Login from './Components/SignupAndLogin/Login';
 
 function App() {
   return (
     <div className="App">
-      <Header />
-      <Signup />
+      <SignupHeader />
+      {/* <Signup /> */}
+      <Login />
     </div>
   );
 }

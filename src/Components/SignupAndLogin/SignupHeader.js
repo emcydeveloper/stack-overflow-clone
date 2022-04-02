@@ -1,7 +1,7 @@
 import "../Styles/header.css";
 
 
-export default function Header() {
+export default function SignupHeader() {
   return (
     <div className="header">
       <h2>StackOverflow Clone</h2>

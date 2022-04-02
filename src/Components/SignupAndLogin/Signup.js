@@ -8,6 +8,7 @@ export default function Signup() {
     id:"",
     firstName: "",
     lastname: "",
+    username:"",
     email: "",
     mobile: "",
     country: "",
@@ -58,6 +59,14 @@ export default function Signup() {
           onChange={handleChange}
           name="lastname"
           value={formData.lastname}
+        />
+        <label htmlFor="username">User Name</label>
+        <input
+          type="text"
+          placeholder="Last Name"
+          onChange={handleChange}
+          name="username"
+          value={formData.username}
         />
 
         <label htmlFor="email">Email</label>
