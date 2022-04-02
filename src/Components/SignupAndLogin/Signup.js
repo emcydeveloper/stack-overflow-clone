@@ -1,7 +1,9 @@
 import "../Styles/signup.css";
 import { useState } from "react";
+import userInfo from "../DataSource/UserInfo.js";
 
 export default function Signup() {
+  let userDetails = userInfo.data.users;
   const [formData, setFormData] = useState({
     firstName: "",
     lastname: "",
@@ -25,10 +27,17 @@ export default function Signup() {
       };
     });
   }
+
   function handleSubmit(event) {
-    console.log(formData);
-    alert("submitted")
+ 
+    let userID = userDetails.length+1;
+    // console.log(userDetails,userID);
+    userDetails = [...userDetails,{...formData,["id"]:userID}]
+    console.log(userDetails)
+    event.preventDefault()
+    // alert("submitted")
 }
+
   return (
     <div className="signup">
       <form onSubmit={handleSubmit}>
