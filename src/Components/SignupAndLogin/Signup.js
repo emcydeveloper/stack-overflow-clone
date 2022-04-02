@@ -1,12 +1,12 @@
 import SignupHeader from "./SignupHeader";
 import "../Styles/signup.css";
 import { useState } from "react";
-import userInfo from "../DataSource/UserInfo.js";
+
 
 export default function Signup() {
-  let userDetails = userInfo.data.users;
+
   const [formData, setFormData] = useState({
-    id:"",
+    // id:"",
     firstName: "",
     lastname: "",
     username:"",
@@ -32,14 +32,25 @@ export default function Signup() {
   }
 
   function handleSubmit(event) {
- 
-    let userID = userDetails.length+1;
-    // console.log(userDetails,userID);
-    
-    userDetails = [...userDetails,{...formData,id:userID}]
-    console.log(userDetails)
-    event.preventDefault()
-    // alert("submitted")
+    fetch('https://6248a7b220197bb4626b9de5.mockapi.io/userinfo', {
+      method: 'POST', // or 'PUT'
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(formData),
+    })
+    .then(response => response.json())
+    .then(data => {
+      console.log('Success:', data);
+      alert('Success');
+    })
+    .catch((error) => {
+      console.error('Error:', error);
+      alert('Error');
+    });
+
+        event.preventDefault()
+
 }
 
   return (
