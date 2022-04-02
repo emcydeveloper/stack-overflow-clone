@@ -1,16 +1,17 @@
 import { useParams } from "react-router-dom";
+import BodyContent from "./BodyContent";
 
 import Header from "./Header";
 
-export default function Home() {
-  const { loginId } = useParams();
-  console.log(loginId);
+export default function Hometest() {
+  // const { loginId } = useParams();
+  // console.log(loginId);
 
   return (
-    <div>
-      
+    <div className="home-container">
       <Header />
-      <h1>Logged in successfully!! Welcome to home page !!!!!</h1>
+      <BodyContent />
+      
     </div>
   );
 }

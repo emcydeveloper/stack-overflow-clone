@@ -1,7 +1,7 @@
 
 import Signup from "./Components/SignupAndLogin/Signup";
 import Login from "./Components/SignupAndLogin/Login";
-import Home from "./Components/AfterLogin/Header";
+import Home from "./Components/AfterLogin/Home";
 import { Switch, Route } from "react-router-dom";
 
 function App() {
