@@ -1,6 +1,9 @@
+// import Header from "./Header";
 
-export default function BodyContent(){
-    return(
-        <h1>Logged in successfully!! Welcome username</h1>
-    )
+export default function BodyContent({userLogin}) {
+  return (
+    <div>
+      <h1>Logged in successfully!! Welcome username - {userLogin}</h1>
+    </div>
+  );
 }

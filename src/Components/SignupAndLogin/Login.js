@@ -1,10 +1,21 @@
 import SignupHeader from "./SignupHeader";
-import userInfo from "../DataSource/UserInfo.js";
-import { useState } from "react";
+// import userInfo from "../DataSource/UserInfo.js";
+import { useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
 
 export default function Login() {
   const successLogin = useHistory();
+  let [getData,setGetData]=useState([])
+
+
+  useEffect(function(){
+    console.log("effect")
+    fetch("https://6248a7b220197bb4626b9de5.mockapi.io/userinfo")
+    .then(res => res.json())
+    .then(data => setGetData(data))
+  },[])
+
+
 
   const [loginUser, setLoginUser] = useState("");
   const [validation, setvalidation] = useState({
@@ -30,8 +41,8 @@ export default function Login() {
   }
 
   function UserValidate(getUserName) {
-    let getData = userInfo.data.users;
-    getData.map((user) => {
+    
+    getData.find((user) => {
       if (user.username === getUserName.username) {
         setvalidation({
           isuser: true,
