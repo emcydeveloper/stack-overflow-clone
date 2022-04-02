@@ -1,3 +1,4 @@
+import SignupHeader from "./SignupHeader";
 import "../Styles/signup.css";
 import { useState } from "react";
 import userInfo from "../DataSource/UserInfo.js";
@@ -42,7 +43,10 @@ export default function Signup() {
 }
 
   return (
+    <div className="login-conintainer">
+      <SignupHeader />
     <div className="signup">
+      
       <form onSubmit={handleSubmit}>
         <label htmlFor="firstname">First Name</label>
         <input
@@ -121,6 +125,7 @@ export default function Signup() {
         />
         <button>Submit</button>
       </form>
+    </div>
     </div>
   );
 }
