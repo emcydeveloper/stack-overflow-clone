@@ -5,6 +5,7 @@ import userInfo from "../DataSource/UserInfo.js";
 export default function Signup() {
   let userDetails = userInfo.data.users;
   const [formData, setFormData] = useState({
+    id:"",
     firstName: "",
     lastname: "",
     email: "",
@@ -32,7 +33,8 @@ export default function Signup() {
  
     let userID = userDetails.length+1;
     // console.log(userDetails,userID);
-    userDetails = [...userDetails,{...formData,["id"]:userID}]
+    
+    userDetails = [...userDetails,{...formData,id:userID}]
     console.log(userDetails)
     event.preventDefault()
     // alert("submitted")

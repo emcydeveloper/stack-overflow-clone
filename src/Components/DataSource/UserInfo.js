@@ -2,7 +2,7 @@ export default {
   "data":{
     "users": [
         {
-          id: "1",
+          id: 1,
           firstname: "Ganesh",
           lastname: "Kanna",
           email: "test@gmail.com ",
@@ -13,7 +13,7 @@ export default {
           comments: "Nothing",
         },
         {
-          id: "2",
+          id: 2,
           firstname: "Durga",
           lastname: "Ganesh",
           email: "testDurga@gmail.com ",
