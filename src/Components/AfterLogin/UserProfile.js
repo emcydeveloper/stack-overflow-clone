@@ -32,6 +32,7 @@ export default function UserProfile({userLogin}) {
     fetch(`https://6248a7b220197bb4626b9de5.mockapi.io/userinfo/${userLogin}`)
     .then(res => res.json())
     .then(data => setFormData(data))
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   },[])
 
   function handleSubmit(event) {
