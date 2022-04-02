@@ -13,7 +13,7 @@ export default function Signup() {
     comments: "",
   });
 
-  console.log(formData);
+  
 
   function handleChange(event) {
     console.log(event);
@@ -25,10 +25,13 @@ export default function Signup() {
       };
     });
   }
-
+  function handleSubmit(event) {
+    console.log(formData);
+    alert("submitted")
+}
   return (
     <div className="signup">
-      <form>
+      <form onSubmit={handleSubmit}>
         <label htmlFor="firstname">First Name</label>
         <input
           type="text"
