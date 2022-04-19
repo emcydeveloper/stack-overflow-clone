@@ -17,7 +17,7 @@ export default function Login() {
 
 
 
-  const [loginUser, setLoginUser] = useState("");
+  const [loginUser, setLoginUser] = useState({userName:""});
   const [validation, setvalidation] = useState({
     isuser: false,
     userId: null,
@@ -69,7 +69,7 @@ export default function Login() {
             placeholder="User name"
             onChange={handleChange}
             name="username"
-            value={loginUser.username}
+            value={loginUser.userName}
           />
           <button>Login</button>
         </form>

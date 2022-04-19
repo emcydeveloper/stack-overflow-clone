@@ -1,55 +1,49 @@
-import "../Styles/question.css";
-import questionDB from "../DataSource/questionsDB";
-import answerDB from "../DataSource/answersDB";
+import "../Styles/style.css";
+import questionAnswersDB from "../DataSource/questionAnswersDB";
 import Header from "./Header";
-import { useState } from "react";
+import DisplayQuesAnswers from "./DisplayQuesAnswers";
 
-export default function Question({ userLogin }) {
-  // let userLogin = parseInt(userLogin);
-  let [myQuestion, setMyQuestion] = useState(
-    {
-      questionedBy: userLogin,
-      questionID: [],
-      question: [],
-    },
-  );
+export default function Question() {
+  let userLogin = 1;
+  let questionAnswers = questionAnswersDB.questionAnswersDB;
 
-  let userQuestions = questionDB.data.questionsData;
-  let answered = questionDB.data.answersData;
+  // console.log(questionAnswers);
 
-  let newData=[];
-  let newData2=[];
+  let getQuestionsAndAnswers = questionAnswers
+    .filter((ques) => ques.type === "question" && ques.createdBy === 1)
+    .map((question) =>
+      questionAnswers.filter((aa) => question.questionID === aa.questionID)
+    )
 
-  let get = userQuestions.map((ques) => {
-    if (ques.updatedby === parseInt(userLogin)) {
-      newData = [...newData,ques.questionid]
-      newData2 = [...newData2,ques.question]
-      // setMyQuestion(function(){
-     
-        
-      // })
-      console.log(ques.questionid);
-      console.log(ques.question);
-  
-    }
-    return "";
+  // let getData = getQuestionsAndAnswers.map((a)=> a.map((get,i)=> {return <DisplayQuesAnswers key = {i} setVal = {get} />}))
+  let getData = getQuestionsAndAnswers.map((a) => {
+    return (
+      <div className="user-que-ans">
+        {a.map((get, i) => (
+          <DisplayQuesAnswers key={i} setVal={get} />
+        ))}
+        <div className="user-que-ans-accessories">
+            <div>like</div>
+            <div>dislike</div>
+            <button>answer</button>
+        </div>
+      </div>
+    );
   });
 
-  // setMyQuestion(function(){
-  //   // myQuestion = {...myQuestion,questionedBy:userLogin,...questionID,newData}
-  //   // myQuestion.questionID=[...myQuestion.questionID,newData]
-  //   // myQuestion.question=[...myQuestion.question,newData]
-  // })
-  console.log(newData)
-  console.log(newData2)
-  
+  // console.log(getData);
 
+  // console.log(getQuestions);
+
+  //<DisplayQuestions question={res.value} updatedby={res.createdBy} />
   return (
-    <div className="questions">
+    <>
       <Header userLogin={userLogin} />
       <h1>questions - {userLogin}</h1>
       <button className="askquestion">Add a Question</button>
-      <div>{newData2}</div>
-    </div>
+      {/* {getQuestions} */}
+      {/* {getAnswers} */}
+      {getData}
+    </>
   );
 }

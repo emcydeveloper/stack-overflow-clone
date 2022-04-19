@@ -9,7 +9,7 @@ export default function Header(loginId) {
       {/* <h2>{loginId}</h2> */}
       <nav className="home-header-nav">
         <ul>
-        {/* <li><Link to="/home">home</Link></li> */}
+          <li><Link to="/home">Home</Link></li>
           <li><Link to="/questions">Questions</Link></li>
           <li><Link to="/searchtag">Search Tag</Link></li>
           <li><Link to="/company">Company</Link></li>

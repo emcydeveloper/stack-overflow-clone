@@ -1,6 +1,7 @@
 import Header from "./Header";
 
-export default function SearchTag({userLogin}) {
+export default function SearchTag() {
+  let  userLogin = 1;
   return (
     <div>
       <Header userLogin={userLogin}/>

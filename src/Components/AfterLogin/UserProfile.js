@@ -2,10 +2,11 @@ import { useEffect, useState } from "react";
 
 import Header from "./Header";
 
-export default function UserProfile({userLogin}) {
+export default function UserProfile() {
+  let userLogin = 1;
   const [formData, setFormData] = useState({
     id:"",
-    firstName: "",
+    firstname: "",
     lastname: "",
     username:"",
     email: "",
@@ -72,7 +73,7 @@ export default function UserProfile({userLogin}) {
           placeholder="First Name"
           onChange={handleChange}
           name="firstName"
-          value={formData.firstName}
+          value={formData.firstname}
         />
         <label htmlFor="lastname">Last Name</label>
         <input
