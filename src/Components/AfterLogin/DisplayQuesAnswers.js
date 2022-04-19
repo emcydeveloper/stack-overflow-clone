@@ -5,8 +5,9 @@ import DisplayAnswers from "./DisplayAnswers"
 
 export default function DisplayQuesAnswers({setVal}){
     // console.log(setVal);
-    let { type, createdBy, createdOn, value } = setVal
+    // let { type, createdBy, createdOn, value } = setVal
     // console.log(type, createdBy, createdOn, value,"inside dispaly ans")
+    let { type } = setVal
     return(
         <>
         

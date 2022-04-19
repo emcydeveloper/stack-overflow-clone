@@ -2,7 +2,8 @@
 
 export default function DisplayAnswers({answerData}){
     
-    let { type, createdBy, createdOn, value } = answerData
+    // let { type, createdBy, createdOn, value } = answerData
+    let {  createdBy, createdOn, value } = answerData
 
     return(
         <div className="display-ans">
