@@ -9,7 +9,7 @@ export default function DisplayAnswers({answerData}){
         <h2>{value}</h2>
         <div className="display-ans-accessories">
             <div>like</div>
-            <div>comment</div>
+            <div>dislike</div>
             <div>answered by: {createdBy}</div>
             <div>answered on: {createdOn}</div>
 

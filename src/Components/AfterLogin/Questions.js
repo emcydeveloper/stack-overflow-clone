@@ -16,9 +16,9 @@ export default function Question() {
     )
 
   // let getData = getQuestionsAndAnswers.map((a)=> a.map((get,i)=> {return <DisplayQuesAnswers key = {i} setVal = {get} />}))
-  let getData = getQuestionsAndAnswers.map((a) => {
+  let getData = getQuestionsAndAnswers.map((a,i) => {
     return (
-      <div className="user-que-ans">
+      <div key={i} className="user-que-ans">
         {a.map((get, i) => (
           <DisplayQuesAnswers key={i} setVal={get} />
         ))}

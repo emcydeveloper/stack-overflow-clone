@@ -8,6 +8,7 @@ export default {
           {type:"answer",createdBy:2,questionID:1,createdOn:"date","value":"Your name is Kanna"},
           {type:"answer",createdBy:3,questionID:1,createdOn:"date","value":"Your name is Ganesh Kanna"},
           {type:"question",createdBy:2,questionID:3,createdOn:"date","value":"What is my role 2"},
+          {type:"answer",createdBy:3,questionID:3,createdOn:"date","value":"Your role is React Developer"},
         ],
       
     };
