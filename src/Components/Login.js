@@ -9,7 +9,6 @@ export default function Login() {
 
 
   useEffect(function(){
-    console.log("effect")
     fetch("https://6248a7b220197bb4626b9de5.mockapi.io/userinfo")
     .then(res => res.json())
     .then(data => setGetData(data))
@@ -27,9 +26,9 @@ export default function Login() {
   function handleChange(event) {
     console.log(event.target.value);
     const { name, value } = event.target;
-    setLoginUser((prevFormData) => {
+    setLoginUser((prevState) => {
       return {
-        ...prevFormData,
+        ...prevState,
         [name]: value,
       };
     });
@@ -43,7 +42,7 @@ export default function Login() {
   function UserValidate(getUserName) {
     
     getData.find((user) => {
-      if (user.username === getUserName.username) {
+      if (user.username === getUserName.userName) {
         setvalidation({
           isuser: true,
           userId: user.id,
@@ -69,7 +68,7 @@ export default function Login() {
             type="text"
             placeholder="User name"
             onChange={handleChange}
-            name="username"
+            name="userName"
             value={loginUser.userName}
           />
           <button>Login</button>
