@@ -1,5 +1,5 @@
 import SignupHeader from "./SignupHeader";
-import "../Styles/signup.css";
+import "./Styles/signup.css";
 import { useState } from "react";
 
 

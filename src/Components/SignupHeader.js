@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import "../Styles/header.css";
+import "./Styles/header.css";
 
 export default function SignupHeader() {
   return (

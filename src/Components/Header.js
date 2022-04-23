@@ -1,4 +1,4 @@
-import "../Styles/home.css";
+import "./Styles/home.css";
 import { Link } from "react-router-dom";
 
 export default function Header(loginId) {
@@ -14,6 +14,7 @@ export default function Header(loginId) {
           <li><Link to="/searchtag">Search Tag</Link></li>
           <li><Link to="/company">Company</Link></li>
           <li><Link to="/userprofile">User Profile</Link></li>
+
         </ul>
       </nav>
     </div>

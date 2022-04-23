@@ -52,7 +52,8 @@ export default function Login() {
         // successLogin("/",{loginId:1} )
         console.log(successLogin);
         // successLogin('/',{loginId: user.id})
-        successLogin.push("/user/" + user.id);
+        // successLogin.push("/user/" + user.id);
+        successLogin.push("/home");
       }
       return "";
     });
