@@ -18,7 +18,7 @@ export default function Login() {
 
   const [loginUser, setLoginUser] = useState({userName:""});
   const [validation, setvalidation] = useState({
-    isuser: false,
+    isuser: true,
     userId: null,
     userName: "",
   });
@@ -53,6 +53,12 @@ export default function Login() {
         // successLogin('/',{loginId: user.id})
         // successLogin.push("/user/" + user.id);
         successLogin.push("/home");
+      }else{
+        setvalidation({
+          isuser: false,
+          userId: null,
+          userName: "",
+        });
       }
       return "";
     });
@@ -73,9 +79,9 @@ export default function Login() {
           />
           <button>Login</button>
         </form>
-        <h1>
-          {validation.isuser ? "Login Successfull!!" : "Invalid username"}
-        </h1>
+        
+          {!validation.isuser && <h1>Invalid username</h1> }
+        
       </div>
     </div>
   );
