@@ -12,12 +12,15 @@ export default function Questions({questionAndAnswers,setQuestionAndAnswers}){
 
     let userQuestions = questionAndAnswers.filter((getQues)=>getQues.type==="question"&&getQues.createdBy===loginId)
     let userQuesAndAns = userQuestions.map((quesId)=> {return questionAndAnswers.filter((getInfo)=>getInfo.questionID===quesId.questionID)})
-
+    let questionID = questionAndAnswers.filter(getQues=>getQues.type==="question")
+    
     let handleAddAnswer = (add) => {setQuestionAndAnswers((prevState)=>[...prevState,add])}
     let handletexAreaVisisble = ()=>{setTextAreaVisible((prevState)=>!prevState)}
     let handleGetQuestion = (event) => {setTextAreaValue(event.target.value);};
     let handleSubmitQuestion = () => {
-        handleAddAnswer({type:"question",createdBy:loginId,createdOn:"date",value:textAreaValue});
+        handleAddAnswer({type:"question",createdBy:loginId,questionID:questionID.length+1,createdOn:"date",value:textAreaValue});
+        
+        
         //{type:"question",createdBy:1,questionID:1,createdOn:"date",value:"What is my Name"}
         setTextAreaVisible((prevState) => !prevState);
         setTextAreaValue("");
