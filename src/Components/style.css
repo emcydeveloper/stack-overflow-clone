@@ -19,19 +19,16 @@
 }
 
 .display-ques-ans-ans{
-    padding: 10px 20px;
+    padding: 10px 10px 0px 10px;
     margin: 10px 20px;
     /* width: fit-content; */
     background-color: white;
     border-radius: 15px;
 }
 
-.ques-info{
-    padding-bottom: 5px;
-}
-
 .ans{
-    padding-bottom: 5px;
+    padding: 0px;
+    margin: 0px;
 }
 
 .display-ques-ans-actions{
@@ -54,4 +51,60 @@ padding: 5px;
 
 .post-questions{
     text-align: center;
+}
+
+.ans-info{
+    padding: 0px 0px 0px 0px;
+    margin: 0px 0px 0px 0px;
+    display: flex;
+    justify-content: space-around;
+    background-color: rgb(238, 245, 239);
+    text-align: center;
+    border-radius: 5px;;
+    
+}
+
+.ques-info{
+    padding: 0px 10px 10px 10px;
+    margin: 0px 0px 10px 0px;
+    display: flex;
+    justify-content: space-around;
+    /* margin-top: 20px; */
+    background-color: rgb(222, 225, 228);
+    text-align: center;
+    border-radius: 5px;;
+}
+
+.ans-info>div>p{
+    
+    font-size: small;
+    padding: 0px 0px 0px 0px;
+    margin: 0px 0px 0px 0px;
+}
+
+.ans-info>div>span{
+    
+    font-size: small;
+    padding: 0px 0px 0px 0px;
+    margin: 0px 0px 0px 0px;
+}
+
+.ques-info>div>p{
+    
+    font-size: small;
+    padding: 0px 0px 0px 0px;
+    margin: 0px 0px 0px 0px;
+}
+
+.qyues-info>div>span{
+    
+    font-size: small;
+    padding: 0px 0px 0px 0px;
+    margin: 0px 0px 0px 0px;
+}
+
+.ques{
+    font-size: xx-large;
+    font-weight: bold;
+    padding: 20px;
 }

@@ -13,14 +13,14 @@ import Company from "./Components/Company";
 function App() {
   
   let [questionAndAnswers,setQuestionAndAnswers] = useState([
-    {type:"question",createdBy:1,questionID:1,createdOn:"date",value:"What is my Name"},
-    {type:"answer",createdBy:2,questionID:1,createdOn:"date",value:"Your name is ganesh"},
-    {type:"question",createdBy:1,questionID:2,createdOn:"date",value:"What is my role"},
-    {type:"answer",createdBy:2,questionID:2,createdOn:"date",value:"developer"},
-    {type:"answer",createdBy:2,questionID:1,createdOn:"date",value:"Your name is Kanna"},
-    {type:"answer",createdBy:3,questionID:1,createdOn:"date",value:"Your name is Ganesh Kanna"},
-    {type:"question",createdBy:2,questionID:3,createdOn:"date",value:"What is my role 2"},
-    {type:"answer",createdBy:3,questionID:3,createdOn:"date",value:"Your role is React Developer"},
+    {type:"question",createdBy:1,questionID:1,createdOn:"20/4/2022",value:"What is my Name"},
+    {type:"answer",createdBy:2,questionID:1,createdOn:"21/4/2022",value:"Your name is ganesh"},
+    {type:"question",createdBy:1,questionID:2,createdOn:"4/4/2022",value:"What is my role"},
+    {type:"answer",createdBy:2,questionID:2,createdOn:"14/4/2022",value:"developer"},
+    {type:"answer",createdBy:2,questionID:1,createdOn:"22/4/2022",value:"Your name is Kanna"},
+    {type:"answer",createdBy:3,questionID:1,createdOn:"20/4/2022",value:"Your name is Ganesh Kanna"},
+    {type:"question",createdBy:2,questionID:3,createdOn:"1/4/2022",value:"What is my role 2"},
+    {type:"answer",createdBy:3,questionID:3,createdOn:"9/4/2022",value:"Your role is React Developer"},
 ])
 
 
