@@ -121,3 +121,13 @@ padding: 5px;
 .vote-up,.vote-down{
     background: none;
 }
+
+.company-content{
+    display: flex;
+    padding: 10px;
+}
+
+.company-content-info{
+    margin: 10px;
+    border: 1px solid black;
+}
