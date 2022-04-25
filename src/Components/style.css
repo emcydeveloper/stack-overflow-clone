@@ -14,6 +14,7 @@
 
 
 .display-ques-ans-ques{
+    display: flex;
     margin: 5px;
     /* padding: 25px; */
 }
@@ -49,28 +50,31 @@ padding: 5px;
 
 }
 
-.post-questions{
+/* .post-questions{
     text-align: center;
-}
+} */
 
 .ans-info{
     padding: 0px 0px 0px 0px;
     margin: 0px 0px 0px 0px;
     display: flex;
-    justify-content: space-around;
-    background-color: rgb(238, 245, 239);
-    text-align: center;
+    justify-content: flex-start;
+    /* background-color: rgb(238, 245, 239); */
+    color: rgb(122, 122, 116);
+    /* text-align: center; */
     border-radius: 5px;;
     
 }
 
 .ques-info{
-    padding: 0px 10px 10px 10px;
-    margin: 0px 0px 10px 0px;
-    display: flex;
-    justify-content: space-around;
+    padding: 0px 0px 0px 0px;
+    margin: 0px 0px 0px 0px;
+    /* display: flex;
+    justify-content: space-around; */
     /* margin-top: 20px; */
-    background-color: rgb(222, 225, 228);
+    font-size: large;
+    /* background-color: rgb(222, 225, 228); */
+    color: rgb(122, 122, 116);
     text-align: center;
     border-radius: 5px;;
 }
@@ -89,13 +93,6 @@ padding: 5px;
     margin: 0px 0px 0px 0px;
 }
 
-.ques-info>div>p{
-    
-    font-size: small;
-    padding: 0px 0px 0px 0px;
-    margin: 0px 0px 0px 0px;
-}
-
 .qyues-info>div>span{
     
     font-size: small;
@@ -107,4 +104,20 @@ padding: 5px;
     font-size: xx-large;
     font-weight: bold;
     padding: 20px;
+}
+
+.ques>p{
+    margin: 0px 0px 20px 0px;
+}
+
+.display-ques-ans-votes{
+    display: flex;
+    padding: 20px;
+    font-size: x-large;
+    flex-direction: column;
+    text-align: center;
+}
+
+.vote-up,.vote-down{
+    background: none;
 }
